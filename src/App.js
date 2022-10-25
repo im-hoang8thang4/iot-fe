@@ -10,7 +10,7 @@ function App() {
     await axios.patch(
       "http://iot.tuiladat.ml/light/LIGHT_01",
       {
-        mode: "manual",
+        mode: 1,
         enabled: !toggleLight,
       },
       {
@@ -26,7 +26,7 @@ function App() {
     await axios.patch(
       "http://iot.tuiladat.ml/light/LIGHT_02",
       {
-        mode: "auto",
+        mode: 0,
         enabled: !autoLight,
       },
       {
