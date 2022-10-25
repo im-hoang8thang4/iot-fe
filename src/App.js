@@ -75,19 +75,10 @@ function App() {
       <img src={bg} className="w-full h-full object-cover" />
       <div className="flex absolute gap-12 right-[20%] top-[20%]">
         {light.map((l) => (
-          <div className="flex flex-col gap-3">
-            <div className="flex gap-2 items-center">
-              <Switch
-                id={l.id}
-                ripple={true}
-                checked={l.enabled}
-                onChange={() => handletoggleLight(l)}
-                disabled={checked(l.mode)}
-              />
-              <span className="text-lg font-semibold text-white">
-                {l.lightName}
-              </span>
-            </div>
+          <div className="flex flex-col gap-3 p-4 border-[1px] border-solid border-yellow-800">
+            <span className="flex justify-center text-xl font-bold text-red-900">
+            {l.lightName}
+            </span>
             <div className="flex gap-2 items-center">
               <Switch
                 id={l.lightName}
@@ -99,6 +90,19 @@ function App() {
                 Tự động bật tắt đèn
               </span>
             </div>
+            <div className="flex gap-2 items-center">
+              <Switch
+                id={l.id}
+                ripple={true}
+                checked={l.enabled}
+                onChange={() => handletoggleLight(l)}
+                disabled={checked(l.mode)}
+              />
+              <span className="text-lg font-semibold text-white">
+                {l.enabled ? 'ON' : 'OFF'}
+              </span>
+            </div>
+            
           </div>
         ))}
       </div>
