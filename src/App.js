@@ -75,7 +75,7 @@ function App() {
       <img src={bg} className="w-full h-full object-cover" />
       <div className="flex absolute gap-12 right-[20%] top-[20%]">
         {light.map((l) => (
-          <div className="flex flex-col gap-3 p-4 border-[1px] border-solid border-yellow-800">
+          <div className="flex flex-col gap-3 p-4 border-[1px] border-solid border-yellow-800 bg-orange-400 rounded-md">
             <span className="flex justify-center text-xl font-bold text-red-900">
             {l.lightName}
             </span>
