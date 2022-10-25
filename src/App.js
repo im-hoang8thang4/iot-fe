@@ -8,7 +8,7 @@ function App() {
   const handletoggleLight = async () => {
     console.log("toggleLight");
     await axios.patch(
-      "https://iot.tuiladat.ml/light/LIGHT_01",
+      "http://iot.tuiladat.ml/light/LIGHT_01",
       {
         mode: "manual",
         enabled: !toggleLight,
@@ -24,7 +24,7 @@ function App() {
   const handleautoLight = async () => {
     setAutoLight(!autoLight);
     await axios.patch(
-      "https://iot.tuiladat.ml/light/LIGHT_02",
+      "http://iot.tuiladat.ml/light/LIGHT_02",
       {
         mode: "auto",
         enabled: !autoLight,
