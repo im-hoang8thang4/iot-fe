@@ -45,7 +45,7 @@ function App() {
             id="toggleLight"
             ripple={true}
             checked={toggleLight}
-            onClick={handletoggleLight}
+            onChange={handletoggleLight}
           />
           <span className="text-lg font-semibold text-white">
             Điều khiển bật tắt bóng đèn
@@ -56,7 +56,7 @@ function App() {
             id="autoLight"
             ripple={true}
             checked={autoLight}
-            onClick={handleautoLight}
+            onChange={handleautoLight}
           />
           <span className="text-lg font-semibold text-white">
             Tự động bật tắt đèn khi môi trường sáng thay đổi
