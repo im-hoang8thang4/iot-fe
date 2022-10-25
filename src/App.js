@@ -7,18 +7,34 @@ function App() {
   const [autoLight, setAutoLight] = useState(false);
   const handletoggleLight = async () => {
     console.log("toggleLight");
-      await axios.patch("http://iot.tuiladat.ml/light/LIGHT_01", {
-      mode: "manual",
-      enabled: !toggleLight,
-    });
+    await axios.patch(
+      "http://iot.tuiladat.ml/light/LIGHT_01",
+      {
+        mode: "manual",
+        enabled: !toggleLight,
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     setToggleLight(!toggleLight);
   };
   const handleautoLight = async () => {
     setAutoLight(!autoLight);
-    await axios.patch("http://iot.tuiladat.ml/light/LIGHT_02", {
-      mode: "auto",
-      enabled: !autoLight,
-    });
+    await axios.patch(
+      "http://iot.tuiladat.ml/light/LIGHT_02",
+      {
+        mode: "auto",
+        enabled: !autoLight,
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
   };
   return (
     <div className="w-full h-screen flex flex-col justify-center items-center relative">
